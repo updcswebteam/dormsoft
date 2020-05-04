@@ -1,3 +1,5 @@
+For VS Code users, get the extension here: https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight
+
 'Cmd/Ctrl+Enter' // Triggers `Todo: Toggle Box`
 'Alt+Enter' // Triggers `Todo: Toggle Box`
 'Alt+D' // Triggers `Todo: Toggle Done`

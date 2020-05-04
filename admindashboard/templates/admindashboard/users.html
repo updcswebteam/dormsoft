@@ -1,0 +1,8 @@
+{% extends "admindashboard/layout.html"%}
+
+{% block content %}
+    {% for user in users %}
+        <h2>Email: {{ user.email }}</h2>
+        <h3>Pass: {{ user.password }}</h3>
+    {% endfor %}
+{% endblock content %}
