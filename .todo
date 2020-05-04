@@ -1,0 +1,45 @@
+'Cmd/Ctrl+Enter' // Triggers `Todo: Toggle Box`
+'Alt+Enter' // Triggers `Todo: Toggle Box`
+'Alt+D' // Triggers `Todo: Toggle Done`
+'Alt+C' // Triggers `Todo: Toggle Cancelled`
+'Alt+S' // Triggers `Todo: Toggle Start`
+'Cmd/Ctrl+Shift+A' // Triggers  `Todo: Archive`
+
+Maximum Priority:
+    ☐ Build User, Resident, Permit, EntryLog, BedLog, Room models
+    ☐ Build Announcement, Event models
+    Setup CRUD for all models above:
+        ☐ User (can only be created by admin account)
+        ☐ Resident (created when a resident-type user is created)
+        ☐ Permit (created when applying for a permit)
+        ☐ EntryLog (created when logging at the entrance)
+        ☐ BedLog (created when bed checking)
+        ☐ Room (created by admin)
+    Admin clearance:
+        ☐ Can see EntryLogs in a table (dashboard)
+        ☐ Can see BedLogs in a table/view (dashboard)
+        ☐ Can see all Permits in a table (dashboard)
+        ☐ Can approve or deny Permits
+        ☐ Can see all Resident profiles with data summary
+        ☐ Can edit these profiles
+    Station clearance:
+        ☐ Can log residents using name and designated logging 6-digit PIN
+    Staff clearance:
+        ☐ Can do bed-checking with a mobile view
+    User clearance:
+        ☐ Can view their own profile
+        ☐ Can edit their logging PIN
+    No clearance:
+        ☐ Can view events in welcome page
+        ☐ Can view announcements in welcome page
+        
+Optional Priority:
+    ☐ Optimize DataTables with AJAX
+    Admin clearance:
+        ☐ Can track Resident violations and rank them in dashboard
+        ☐ Can see EntryLog statistics/graphs
+        ☐ Can view BedLog statistics/graphs
+        ☐ Can view Permit statistics/graphs
+        ☐ Can export these statistics to a sheets file
+    No clearance:
+        ☐ Can call "Forgot password" in the front page
