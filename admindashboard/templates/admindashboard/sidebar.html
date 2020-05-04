@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-body">
+    <h3>Navigation</h3>
+  </div>
+  <ul class="list-group list-group-flush">
+    <a href="{% url 'admin-dashboard.index' %}" id="sidebar-dashboard" class="list-group-item list-group-item-light">Dashboard</a>
+    <a href="#" id="sidebar-announcements" class="list-group-item list-group-item-light">Announcements</a>
+    <a href="#" id="sidebar-events" class="list-group-item list-group-item-light">Events</a>
+    <a href="{% url 'admin-dashboard.users' %}" id="sidebar-users" class="list-group-item list-group-item-light">Users</a>
+    <a href="{% url 'admin-dashboard.residents' %}" id="sidebar-residents" class="list-group-item list-group-item-light">Residents</a>
+    <a href="{% url 'admin-dashboard.logs' %}" id="sidebar-logs" class="list-group-item list-group-item-light">Logs</a>
+    <a href="#" id="sidebar-permits" class="list-group-item list-group-item-light">Permits</a>
+  </ul>
+</div>
+
+{% if active_link %}
+<script>
+  $(document).ready( function() {
+    $("#sidebar-{{active_link}}").addClass("active");
+  });
+</script>
+{% endif %}

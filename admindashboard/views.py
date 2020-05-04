@@ -14,15 +14,29 @@ debug_users = [
 
 
 def index(request):
-    return render(request, 'admindashboard/index.html')
+    context = {
+        'active_link': "dashboard",
+    }
+    return render(request, 'admindashboard/index.html', context)
 
 
 def users(request):
     context = {
+        'active_link': "users",
         'users': debug_users,
     }
     return render(request, 'admindashboard/users.html', context)
 
 
+def residents(request):
+    context = {
+        'active_link': "residents",
+    }
+    return render(request, 'admindashboard/residents.html', context)
+
+
 def logs(request):
-    return HttpResponse("<h2>Admin dashboard logs<h2>")
+    context = {
+        'active_link': "logs",
+    }
+    return render(request, 'admindashboard/logs.html', context)

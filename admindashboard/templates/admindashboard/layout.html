@@ -10,6 +10,11 @@
 
 	<link rel="stylesheet" href="{% static 'admindashboard/main.css'%}">
 
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
 	{% if title %}
 		<title>Dormsoft Admin - {{ title }}</title>
 	{% else %}
@@ -46,30 +51,12 @@
 	<main role="main" class="container">
 		<div class="row">
 			<div class="col-md-3">
-				<div class="card">
-					<div class="card-body">
-						<h3>Navigation</h3>
-					</div>
-					<ul class="list-group list-group-flush">
-						<li class="list-group-item list-group-item-light">Announcements</li>
-						<li class="list-group-item list-group-item-light">Events</li>
-						<li class="list-group-item list-group-item-light">Users</li>
-						<li class="list-group-item list-group-item-light">Residents</li>
-						<li class="list-group-item list-group-item-light">Logs</li>
-						<li class="list-group-item list-group-item-light">Permits</li>
-						<li class="list-group-item list-group-item-light">etc...</li>
-					</ul>
-				</div>
+				{% include "admindashboard/sidebar.html" %}
 			</div>
 			<div class="col-md-9">
 				{% block content %}{% endblock %}
 			</div>
 		</div>
 	</main>
-
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
